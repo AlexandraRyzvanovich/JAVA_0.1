@@ -1,23 +1,46 @@
 package com.epam.oop.tarifInfo;
 
-import com.epam.oop.tariffModules.InternetModule;
-import com.epam.oop.tariffModules.UserType;
+import com.epam.oop.tariffModules.InternetPackage;
+import com.epam.oop.tariffModules.MinutesPackage;
 
 public class Tariff {
-    private String name;
-    private UserType userType;
-    private int discount;
+
     private double price;
-    private InternetModule internetModule;
-    private boolean roaming;
+    private InternetPackage internet;
+    private MinutesPackage minutesPackage;
+    private String manager;
+    private static int counter;
 
+    public Tariff(){};
 
-
-    public UserType getUserType(){
-        return userType ;
+    public Tariff(double price, InternetPackage internet, MinutesPackage minutesPackage, String manager) {
+        this.price = price;
+        this.internet = internet;
+        this.minutesPackage = minutesPackage;
+        this.manager = manager;
     }
 
-    public String getName() {
-        return name;
+    public double getPrice() {
+        return price;
+    }
+
+    public InternetPackage getInternet() {
+        return internet;
+    }
+
+    public MinutesPackage getMinutesPackage() {
+        return minutesPackage;
+    }
+
+    public String getManager() {
+        return manager;
+    }
+
+    public static void setCounter(int counter) {
+        Tariff.counter = counter;
+    }
+
+    public int getCounter() {
+        return counter;
     }
 }

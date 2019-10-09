@@ -1,26 +1,9 @@
 package com.epam.oop.tarifInfo;
 
-import com.epam.oop.tariffModules.UserType;
-
 public class BusinessTariff extends Tariff {
-    private String name = "BusinessTariff";
-    private UserType userType = UserType.ENTITY;
-    private int discount;
+    private long companyId;
 
-
-
-    public String getName(){
-        return this.name;
+    public long getCompanyId() {
+        return companyId;
     }
-
-    public UserType getUserType(){
-        return this.userType;
-    }
-
-
-
-
-
-
-
 }
