@@ -1,46 +1,63 @@
 package com.epam.oop.tarifInfo;
 
-import com.epam.oop.tariffModules.InternetPackage;
-import com.epam.oop.tariffModules.MinutesPackage;
+import com.epam.oop.tariffModule.CallerPackage;
 
-public class Tariff {
-
-    private double price;
-    private InternetPackage internet;
-    private MinutesPackage minutesPackage;
-    private String manager;
-    private static int counter;
+public class Tariff implements Comparable<Tariff>{
+    private String name;
+    private double subscriptionFee;
+    private CallerPackage callerPackage;
+    private String description;
 
     public Tariff(){};
 
-    public Tariff(double price, InternetPackage internet, MinutesPackage minutesPackage, String manager) {
-        this.price = price;
-        this.internet = internet;
-        this.minutesPackage = minutesPackage;
-        this.manager = manager;
+    public Tariff(CallerPackage callerPackage) {
+        this.callerPackage = callerPackage;
     }
 
-    public double getPrice() {
-        return price;
+    public String getName() {
+        return name;
     }
 
-    public InternetPackage getInternet() {
-        return internet;
+    protected void setName(String name) {
+        this.name = name;
     }
 
-    public MinutesPackage getMinutesPackage() {
-        return minutesPackage;
+    public double getSubscriptionFee() {
+        return subscriptionFee;
     }
 
-    public String getManager() {
-        return manager;
+    protected void setSubscriptionFee(double subscriptionFee) {
+        this.subscriptionFee = subscriptionFee;
     }
 
-    public static void setCounter(int counter) {
-        Tariff.counter = counter;
+    public CallerPackage getCallerPackage() {
+        return callerPackage;
     }
 
-    public int getCounter() {
-        return counter;
+    public void setCallerPackage(CallerPackage callerPackage) {
+        this.callerPackage = callerPackage;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    protected void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Tariff{" +
+                "name= '" + name + '\'' +
+                ", subscriptionFee= " + subscriptionFee +
+                ", minutesPackage= " + callerPackage +
+                ", description= '" + description + '\''
+                ;
+    }
+
+    @Override
+    public int compareTo(Tariff x  ) {
+        return (int)(this.subscriptionFee-x.getSubscriptionFee());
     }
 }
