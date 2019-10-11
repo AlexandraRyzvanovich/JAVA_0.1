@@ -10,8 +10,14 @@ public class Tariff implements Comparable<Tariff>{
 
     public Tariff(){};
 
+
     public Tariff(CallerPackage callerPackage) {
         this.callerPackage = callerPackage;
+    }
+
+    public Tariff(CallerPackage callerPackage, double subscriptionFee) {
+        this(callerPackage);
+        this.subscriptionFee = subscriptionFee;
     }
 
     public String getName() {
