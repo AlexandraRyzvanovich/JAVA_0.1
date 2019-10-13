@@ -1,12 +1,15 @@
-package com.epam.oop.tariffModule;
+package com.epam.oop.tariff;
 
 public enum  Regions {
     ASIA("Asia"), EUROPE("Europe"), AMERICA("America");
-
-    Regions() {
-    }
+    String region;
 
     Regions(String region) {
+        this.region = region;
+    }
+
+    public String getRegion() {
+        return region;
     }
 
     @Override

@@ -1,55 +1,40 @@
-package com.epam.oop.tarifInfo;
-
-import com.epam.oop.tariffModule.CallerPackage;
+package com.epam.oop.tariff;
 
 public class Tariff implements Comparable<Tariff>{
     private String name;
     private double subscriptionFee;
     private CallerPackage callerPackage;
     private String description;
+    private int clientsCount;
 
     public Tariff(){};
 
-
-    public Tariff(CallerPackage callerPackage) {
-        this.callerPackage = callerPackage;
-    }
-
-    public Tariff(CallerPackage callerPackage, double subscriptionFee) {
-        this(callerPackage);
+    public Tariff(String name, double subscriptionFee, CallerPackage callerPackage, String description, int clientsCount) {
+        this.name = name;
         this.subscriptionFee = subscriptionFee;
+        this.callerPackage = callerPackage;
+        this.description = description;
+        this.clientsCount = clientsCount;
     }
 
     public String getName() {
         return name;
     }
 
-    protected void setName(String name) {
-        this.name = name;
-    }
-
     public double getSubscriptionFee() {
         return subscriptionFee;
-    }
-
-    protected void setSubscriptionFee(double subscriptionFee) {
-        this.subscriptionFee = subscriptionFee;
     }
 
     public CallerPackage getCallerPackage() {
         return callerPackage;
     }
 
-    public void setCallerPackage(CallerPackage callerPackage) {
-        this.callerPackage = callerPackage;
-    }
-
     public String getDescription() {
         return description;
     }
 
-    protected void setDescription(String description) {
-        this.description = description;
+    public int getClientsCount() {
+        return clientsCount;
     }
 
     @Override
@@ -58,8 +43,8 @@ public class Tariff implements Comparable<Tariff>{
                 "name= '" + name + '\'' +
                 ", subscriptionFee= " + subscriptionFee +
                 ", minutesPackage= " + callerPackage +
-                ", description= '" + description + '\''
-                ;
+                ", description= '" + description +
+                ", clients count= '" + description +'\'';
     }
 
     @Override
