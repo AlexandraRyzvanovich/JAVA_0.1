@@ -1,7 +1,6 @@
 package com.epam.oop.utils;
 
 import com.epam.oop.tariff.Tariff;
-import org.apache.logging.log4j.*;
 
 import java.util.List;
 

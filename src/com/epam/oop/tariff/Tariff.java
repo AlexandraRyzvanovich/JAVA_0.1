@@ -51,4 +51,5 @@ public class Tariff implements Comparable<Tariff>{
     public int compareTo(Tariff x  ) {
         return (int)(this.subscriptionFee-x.getSubscriptionFee());
     }
+
 }

@@ -3,8 +3,10 @@ package com.epam.oop.factory;
 import com.epam.oop.exception.FactoryException;
 import com.epam.oop.tariff.*;
 
+import java.lang.reflect.Array;
+
 public class Factory {
-    public Tariff getTariff(String[] line){
+    public Tariff getTariff(String[] line) throws FactoryException{
             switch (line[0]) {
                 case "Classic":
                     int smsCount = Integer.parseInt(line[5]);
