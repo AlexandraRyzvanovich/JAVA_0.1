@@ -1,7 +1,8 @@
 package com.epam.oop.tariff;
 
 public enum InternetPackage {
-    UNLIMITED("Unlimited"), LIMITED("Limited"), UNLIMITED_4G("Unlimited 4G");
+    UNLIMITED("Unlimited"), LIMITED("Limited");
+
     String packageName;
 
     InternetPackage(String packageName) {
@@ -11,4 +12,5 @@ public enum InternetPackage {
     public String getPackageName() {
         return packageName;
     }
+
 }

@@ -1,13 +1,11 @@
 package com.epam.oop.tariff;
 
-public class Tariff implements Comparable<Tariff>{
+public class Tariff {
     private String name;
     private double subscriptionFee;
     private CallerPackage callerPackage;
     private String description;
     private int clientsCount;
-
-    public Tariff(){};
 
     public Tariff(String name, double subscriptionFee, CallerPackage callerPackage, String description, int clientsCount) {
         this.name = name;
@@ -45,11 +43,6 @@ public class Tariff implements Comparable<Tariff>{
                 ", minutesPackage= " + callerPackage +
                 ", description= '" + description +
                 ", clients count= '" + description +'\'';
-    }
-
-    @Override
-    public int compareTo(Tariff x  ) {
-        return (int)(this.subscriptionFee-x.getSubscriptionFee());
     }
 
 }
