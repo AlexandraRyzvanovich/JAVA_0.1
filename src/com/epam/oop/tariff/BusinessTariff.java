@@ -4,6 +4,8 @@ public class BusinessTariff extends Tariff {
     private InternetPackage internet;
     private int corporationSize;
 
+    public BusinessTariff() { }
+
     public BusinessTariff(String name, double subscriptionFee, CallerPackage callerPackage,
                           String description, int clientsCount, InternetPackage internet, int corporationSize ) {
         super(name, subscriptionFee, callerPackage, description, clientsCount);

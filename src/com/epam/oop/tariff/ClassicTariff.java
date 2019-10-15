@@ -3,6 +3,8 @@ package com.epam.oop.tariff;
 public class ClassicTariff extends Tariff {
     private int smsCount;
 
+    public ClassicTariff() { }
+
     public ClassicTariff(String name, double subscriptionFee, CallerPackage callerPackage,
                          String description, int clientsCount, int smsCount) {
         super(name, subscriptionFee, callerPackage, description, clientsCount);

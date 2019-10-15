@@ -7,6 +7,8 @@ public class Tariff {
     private String description;
     private int clientsCount;
 
+    public Tariff() { }
+
     public Tariff(String name, double subscriptionFee, CallerPackage callerPackage, String description, int clientsCount) {
         this.name = name;
         this.subscriptionFee = subscriptionFee;

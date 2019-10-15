@@ -3,8 +3,10 @@ package com.epam.oop.tariff;
 public class TouristTariff extends Tariff {
     private Regions regions;
 
+    public TouristTariff() { }
+
     public TouristTariff(String name, double subscriptionFee, CallerPackage callerPackage,
-                          String description, int clientsCount, Regions regions) {
+                         String description, int clientsCount, Regions regions) {
         super(name, subscriptionFee, callerPackage, description, clientsCount);
         this.regions = regions;
     }

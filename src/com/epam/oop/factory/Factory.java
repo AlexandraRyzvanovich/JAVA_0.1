@@ -2,9 +2,12 @@ package com.epam.oop.factory;
 
 import com.epam.oop.exception.FactoryException;
 import com.epam.oop.tariff.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Factory {
-    public Tariff getTariff(String[] line) throws FactoryException{
+    public Tariff getTariff(String[] line){
+        Logger logger = LogManager.getLogger();
         String name;
         double subscriptionFee;
         CallerPackage callerPackage;
@@ -16,7 +19,7 @@ public class Factory {
             callerPackage = CallerPackage.valueOf(line[2].toUpperCase());
             description = line[3];
             clientsCount = Integer.parseInt(line[4]);
-        }catch (IllegalArgumentException ex){
+        }catch (IllegalArgumentException | ArrayIndexOutOfBoundsException ex){
             throw new FactoryException("Impossible to convert line properly. Line is skipped", ex);
         }
             switch (line[0]) {

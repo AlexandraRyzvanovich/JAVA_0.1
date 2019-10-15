@@ -4,6 +4,8 @@ public class ProTariff extends Tariff {
     private TVPackage tvPackage;
     private InternetPackage internet;
 
+    public ProTariff() { }
+
     public ProTariff(String name, double subscriptionFee, CallerPackage callerPackage,
                      String description, int clientsCount, TVPackage tvPackage, InternetPackage internet) {
         super(name, subscriptionFee, callerPackage, description, clientsCount);

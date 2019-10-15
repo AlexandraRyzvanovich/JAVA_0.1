@@ -1,0 +1,13 @@
+2019-10-16 00:05:50,886 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 00:13:33,208 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 00:13:57,472 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 00:16:51,388 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 00:17:21,404 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 00:17:34,690 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 00:17:44,933 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 00:17:44,945 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 00:18:25,812 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 00:18:25,822 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 00:18:25,824 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 00:18:25,824 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 00:18:25,826 INFO c.e.o.u.TariffList [main] TariffList is generated

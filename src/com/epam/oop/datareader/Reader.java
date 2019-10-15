@@ -2,6 +2,8 @@ package com.epam.oop.datareader;
 
 import com.epam.oop.exception.FileReaderException;
 import com.epam.oop.validator.DataValidator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +14,9 @@ import java.util.ArrayList;
 
 
 public class Reader {
+
     public  ArrayList<String> readFile(String path) {
+        Logger logger = LogManager.getLogger();
         BufferedReader bufferedReader = null;
         Path filePath = Paths.get(path);
         DataValidator validator = new DataValidator();
@@ -32,8 +36,9 @@ public class Reader {
             if (bufferedReader != null) {
                 try {
                     bufferedReader.close();
+                    logger.info("File was parsed successfully");
                 } catch (IOException e) {
-                    //logger
+                    logger.error("Unable to close bufferReader", e);
                 }
             }
         }

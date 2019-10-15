@@ -1,10 +1,14 @@
 package com.epam.oop.validator;
 
 import com.epam.oop.exception.ValidatorException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DataValidator {
-    private final String REGEX_LINE = "[A-z0-9;\\s+]*";
 
+    Logger log = LogManager.getLogger(DataValidator.class.getName());
+
+    private final String REGEX_LINE = "[A-z0-9;\\s+]*";
 
     public Boolean validateValues(String line) {
 

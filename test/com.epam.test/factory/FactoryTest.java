@@ -19,22 +19,23 @@ public class FactoryTest {
     @DataProvider
     public Object[] validDataForReader() {
         return new Object[][]{
-                {new String[]{"Classic", "50", "Internal", "Tariff for people who like to talk", "1050", "100"}}
-
+                {new String[]{"Classic", "50", "Internal", "Tariff for people who like to talk", "1050", "100"}, 50.0, 1050},
+                {new String[]{"Business", "100", "Full",  "Tariff for a business team", "6000", "Unlimited", "100"}, 100.0, 6000}
         };
     }
 
     @Test(dataProvider = "validDataForReader" )
-    public void createNewObject(String[] array){
+    public void createNewObject(String[] array, double expectedFee, int expectedClientsCount){
         Tariff tariff = factory.getTariff(array);
         Assert.assertNotNull(tariff);
-        Assert.assertEquals(tariff.getClientsCount(), 1050 );
+        Assert.assertEquals(tariff.getSubscriptionFee(), expectedFee);
+        Assert.assertEquals(tariff.getClientsCount(), expectedClientsCount);
     }
     @DataProvider
     public Object[] invalidDataForReader() {
         return new Object[][]{
-                {new String[]{"Classic", "50", "Internal567", "Tariff for people who like to talk", "1050", "100"}}
-
+                {new String[]{"Classic", "50", "Internal567", "Tariff for people who like to talk", "1050", "100"}},
+                {new String[]{"Classic"}}
         };
     }
 
