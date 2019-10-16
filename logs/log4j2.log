@@ -29,3 +29,7 @@
 2019-10-16 02:59:30,751 INFO c.e.o.u.TariffList [main] TariffList is generated
 2019-10-16 03:00:14,285 INFO c.e.o.d.Reader [main] File was parsed successfully
 2019-10-16 03:00:14,304 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 03:29:06,017 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 03:29:45,612 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 03:30:12,366 INFO c.e.o.d.Reader [main] File was parsed successfully
+2019-10-16 03:33:10,324 INFO c.e.o.u.TariffList [main] TariffList is generated
