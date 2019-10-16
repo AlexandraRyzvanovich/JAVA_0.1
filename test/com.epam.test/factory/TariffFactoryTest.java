@@ -1,19 +1,19 @@
 package com.epam.test.factory;
 
 import com.epam.oop.exception.FactoryException;
-import com.epam.oop.factory.Factory;
+import com.epam.oop.factory.TariffFactory;
 import com.epam.oop.entity.Tariff;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class FactoryTest {
-    private Factory factory;
+public class TariffFactoryTest {
+    private TariffFactory tariffFactory;
 
     @BeforeClass
     public void setUp() {
-        factory = new Factory();
+        tariffFactory = new TariffFactory();
     }
 
     @DataProvider
@@ -26,7 +26,7 @@ public class FactoryTest {
 
     @Test(dataProvider = "validDataForFactory" )
     public void createNewObject(String[] array, double expectedFee, int expectedClientsCount){
-        Tariff tariff = factory.getTariff(array);
+        Tariff tariff = tariffFactory.getTariff(array);
         Assert.assertNotNull(tariff);
         Assert.assertEquals(tariff.getSubscriptionFee(), expectedFee);
         Assert.assertEquals(tariff.getClientsCount(), expectedClientsCount);
@@ -41,7 +41,7 @@ public class FactoryTest {
 
     @Test(dataProvider = "invalidDataForFactory", expectedExceptions = FactoryException.class)
     public void createNewObjectFromInvalidData(String[] array) throws FactoryException {
-        Tariff tariff = factory.getTariff(array);
+        Tariff tariff = tariffFactory.getTariff(array);
     }
 
 
