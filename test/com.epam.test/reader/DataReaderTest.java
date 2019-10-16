@@ -1,6 +1,6 @@
-package com.epam.test.datareader;
+package com.epam.test.reader;
 
-import com.epam.oop.datareader.Reader;
+import com.epam.oop.reader.DataReader;
 import com.epam.oop.exception.FileReaderException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-public class ReaderTest {
-    private Reader reader;
+public class DataReaderTest {
+    private DataReader dataReader;
 
     @BeforeClass
     public void setUp(){
-        reader = new Reader();
+        dataReader = new DataReader();
     }
 
     @DataProvider
@@ -26,7 +26,7 @@ public class ReaderTest {
     }
     @Test(dataProvider = "validDataForReader")
     public void readFileWithValidPathSuccessfully(String path, int expectedLength){
-        ArrayList<String> actualList = reader.readFile(path);
+        ArrayList<String> actualList = dataReader.readFile(path);
         Assert.assertNotNull(actualList);
         Assert.assertEquals(actualList.size(), expectedLength );
     }
@@ -39,6 +39,6 @@ public class ReaderTest {
 
     @Test(dataProvider = "invalidDataForReader", expectedExceptions = FileReaderException.class)
     public void readFileWithInvalidPathCatchException(String path) throws FileReaderException {
-        reader.readFile(path);
+        dataReader.readFile(path);
     }
 }

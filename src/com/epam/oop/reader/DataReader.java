@@ -1,4 +1,4 @@
-package com.epam.oop.datareader;
+package com.epam.oop.reader;
 
 import com.epam.oop.exception.FileReaderException;
 import com.epam.oop.validator.DataValidator;
@@ -13,10 +13,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 
-public class Reader {
+public class DataReader {
+    private Logger logger = LogManager.getLogger();
 
     public  ArrayList<String> readFile(String path) {
-        Logger logger = LogManager.getLogger();
         BufferedReader bufferedReader = null;
         Path filePath = Paths.get(path);
         DataValidator validator = new DataValidator();

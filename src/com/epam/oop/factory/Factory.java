@@ -2,12 +2,9 @@ package com.epam.oop.factory;
 
 import com.epam.oop.exception.FactoryException;
 import com.epam.oop.tariff.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class Factory {
     public Tariff getTariff(String[] line) {
-        Logger logger = LogManager.getLogger();
         String name;
         double subscriptionFee;
         CallerPackage callerPackage;
