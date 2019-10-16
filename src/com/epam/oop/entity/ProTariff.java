@@ -1,4 +1,4 @@
-package com.epam.oop.tariff;
+package com.epam.oop.entity;
 
 public class ProTariff extends Tariff {
     private TVPackage tvPackage;

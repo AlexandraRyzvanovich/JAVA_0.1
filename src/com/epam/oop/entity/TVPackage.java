@@ -1,4 +1,4 @@
-package com.epam.oop.tariff;
+package com.epam.oop.entity;
 
 public enum TVPackage {
     MOBILE("Mobile"), SATELLITE("Satellite"), DIGITAL("Digital");

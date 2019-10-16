@@ -1,7 +1,7 @@
 package com.epam.oop.utils;
 
 import com.epam.oop.exception.UtilsException;
-import com.epam.oop.tariff.Tariff;
+import com.epam.oop.entity.Tariff;
 
 import java.util.List;
 

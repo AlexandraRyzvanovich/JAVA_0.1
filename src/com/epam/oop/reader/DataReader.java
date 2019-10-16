@@ -1,6 +1,6 @@
 package com.epam.oop.reader;
 
-import com.epam.oop.exception.FileReaderException;
+import com.epam.oop.exception.DataReaderException;
 import com.epam.oop.validator.DataValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,9 +12,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-
 public class DataReader {
-    private Logger logger = LogManager.getLogger();
+    private static Logger logger = LogManager.getLogger();
 
     public  ArrayList<String> readFile(String path) {
         BufferedReader bufferedReader = null;
@@ -31,7 +30,7 @@ public class DataReader {
                 }
             }
         } catch (IOException ex) {
-            throw new FileReaderException("Exception occurred while reading a file", ex);
+            throw new DataReaderException("Exception occurred while reading a file", ex);
         } finally {
             if (bufferedReader != null) {
                 try {

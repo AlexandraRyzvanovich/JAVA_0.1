@@ -5,6 +5,7 @@
         <classes>
             <class name="com.epam.test.reader.DataReaderTest"/>
             <class name="com.epam.test.utils.TariffFinderTest"/>
+            <class name="com.epam.test.sorter.TariffSorterTest"/>
             <class name="com.epam.test.utils.TariffListTest"/>
             <class name="com.epam.test.validator.DataValidatorTest"/>
         </classes>

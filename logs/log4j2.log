@@ -37,3 +37,9 @@
 2019-10-16 03:39:25,553 INFO c.e.o.u.TariffList [main] TariffList is generated
 2019-10-16 03:41:57,224 INFO c.e.o.r.DataReader [main] File was parsed successfully
 2019-10-16 03:41:57,242 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 22:21:13,710 INFO c.e.o.r.DataReader [main] File was parsed successfully
+2019-10-16 22:21:13,900 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 22:24:12,890 INFO c.e.o.r.DataReader [main] File was parsed successfully
+2019-10-16 22:24:12,940 INFO c.e.o.u.TariffList [main] TariffList is generated
+2019-10-16 23:35:21,366 INFO c.e.o.r.DataReader [main] File was parsed successfully
+2019-10-16 23:35:21,655 INFO c.e.o.u.TariffList [main] TariffList is generated

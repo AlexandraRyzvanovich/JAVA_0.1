@@ -1,4 +1,4 @@
-package com.epam.oop.tariff;
+package com.epam.oop.entity;
 
 public enum InternetPackage {
     UNLIMITED("Unlimited"), LIMITED("Limited");

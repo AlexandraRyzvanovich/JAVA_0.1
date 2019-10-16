@@ -1,7 +1,7 @@
 package com.epam.oop.factory;
 
 import com.epam.oop.exception.FactoryException;
-import com.epam.oop.tariff.*;
+import com.epam.oop.entity.*;
 
 public class Factory {
     public Tariff getTariff(String[] line) {

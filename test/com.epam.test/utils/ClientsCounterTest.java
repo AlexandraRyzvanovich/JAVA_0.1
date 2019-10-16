@@ -1,6 +1,6 @@
 package com.epam.test.utils;
 
-import com.epam.oop.tariff.*;
+import com.epam.oop.entity.*;
 import com.epam.oop.utils.ClientsCounter;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;

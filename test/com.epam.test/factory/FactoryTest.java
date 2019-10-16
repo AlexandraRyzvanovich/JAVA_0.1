@@ -2,7 +2,7 @@ package com.epam.test.factory;
 
 import com.epam.oop.exception.FactoryException;
 import com.epam.oop.factory.Factory;
-import com.epam.oop.tariff.Tariff;
+import com.epam.oop.entity.Tariff;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;

@@ -1,4 +1,4 @@
-package com.epam.oop.tariff;
+package com.epam.oop.entity;
 
 public enum CallerPackage {
     INTERNAL("Internal"), EXTERNAL("External"), FULL("Full");

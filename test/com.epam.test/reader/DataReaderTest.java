@@ -1,7 +1,7 @@
 package com.epam.test.reader;
 
 import com.epam.oop.reader.DataReader;
-import com.epam.oop.exception.FileReaderException;
+import com.epam.oop.exception.DataReaderException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -24,6 +24,7 @@ public class DataReaderTest {
 
         };
     }
+
     @Test(dataProvider = "validDataForReader")
     public void readFileWithValidPathSuccessfully(String path, int expectedLength){
         ArrayList<String> actualList = dataReader.readFile(path);
@@ -37,8 +38,8 @@ public class DataReaderTest {
                 {"./resources/DataFileTest123"};
     }
 
-    @Test(dataProvider = "invalidDataForReader", expectedExceptions = FileReaderException.class)
-    public void readFileWithInvalidPathCatchException(String path) throws FileReaderException {
+    @Test(dataProvider = "invalidDataForReader", expectedExceptions = DataReaderException.class)
+    public void readFileWithInvalidPathCatchException(String path) throws DataReaderException {
         dataReader.readFile(path);
     }
 }

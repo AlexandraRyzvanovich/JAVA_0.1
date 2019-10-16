@@ -1,7 +1,7 @@
 package com.epam.oop.utils;
 
 import com.epam.oop.factory.Factory;
-import com.epam.oop.tariff.Tariff;
+import com.epam.oop.entity.Tariff;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

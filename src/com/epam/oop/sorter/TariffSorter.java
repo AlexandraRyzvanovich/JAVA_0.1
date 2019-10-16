@@ -1,16 +1,16 @@
-package com.epam.oop.utils;
+package com.epam.oop.sorter;
 
-import com.epam.oop.tariff.Tariff;
+import com.epam.oop.entity.Tariff;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Sorter {
+public class TariffSorter {
     private final Comparator<Tariff> comparator1;
     private final Comparator<Tariff> comparator2;
 
-    public Sorter() {
+    public TariffSorter() {
         comparator1 = Comparator.comparing(obj -> obj.getSubscriptionFee());
         comparator2 = comparator1.thenComparing(obj -> obj.getClientsCount());
     }

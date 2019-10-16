@@ -1,4 +1,4 @@
-package com.epam.oop.tariff;
+package com.epam.oop.entity;
 
 public class TouristTariff extends Tariff {
     private Regions regions;

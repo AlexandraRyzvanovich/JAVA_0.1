@@ -1,7 +1,7 @@
-package com.epam.test.utils;
+package com.epam.test.sorter;
 
-import com.epam.oop.tariff.*;
-import com.epam.oop.utils.Sorter;
+import com.epam.oop.entity.*;
+import com.epam.oop.sorter.TariffSorter;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -9,14 +9,14 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SorterTest {
-    private Sorter sorter;
+public class TariffSorterTest {
+    private TariffSorter tariffSorter;
     private List<Tariff> tariffs1;
     private List<Tariff> tariffs2;
 
     @BeforeClass
     public void setUp() {
-        sorter = new Sorter();
+        tariffSorter = new TariffSorter();
         tariffs1 = new ArrayList<>();
 
         tariffs1.add(new BusinessTariff("Business", 100.0, CallerPackage.INTERNAL,
@@ -37,7 +37,7 @@ public class SorterTest {
 
     @Test
     public void sortByFeeTest(){
-        List<Tariff> sortedList = sorter.sortByFee(tariffs1);
+        List<Tariff> sortedList = tariffSorter.sortByFee(tariffs1);
         Assert.assertEquals(sortedList.get(0).getSubscriptionFee(), 50.0 );
         Assert.assertEquals(sortedList.get(1).getSubscriptionFee(), 80.0 );
         Assert.assertEquals(sortedList.get(2).getSubscriptionFee(), 100.0 );
@@ -45,7 +45,7 @@ public class SorterTest {
 
     @Test
     public void sortByClientsAndFeeTest(){
-        List<Tariff> sortedList = sorter.sortByClientsAndFee(tariffs2);
+        List<Tariff> sortedList = tariffSorter.sortByClientsAndFee(tariffs2);
         Assert.assertEquals(sortedList.get(0).getClientsCount(), 50 );
         Assert.assertEquals(sortedList.get(1).getClientsCount(), 100 );
         Assert.assertEquals(sortedList.get(2).getClientsCount(), 1800 );

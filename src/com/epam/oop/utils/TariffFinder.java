@@ -1,8 +1,8 @@
 package com.epam.oop.utils;
 
-import com.epam.oop.tariff.ProTariff;
-import com.epam.oop.tariff.TVPackage;
-import com.epam.oop.tariff.Tariff;
+import com.epam.oop.entity.ProTariff;
+import com.epam.oop.entity.TVPackage;
+import com.epam.oop.entity.Tariff;
 
 import java.util.List;
 

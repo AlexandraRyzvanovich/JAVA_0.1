@@ -1,4 +1,4 @@
-package com.epam.oop.tariff;
+package com.epam.oop.entity;
 
 public class ClassicTariff extends Tariff {
     private int smsCount;

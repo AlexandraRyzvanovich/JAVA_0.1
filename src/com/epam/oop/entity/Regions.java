@@ -1,4 +1,4 @@
-package com.epam.oop.tariff;
+package com.epam.oop.entity;
 
 public enum  Regions {
     ASIA("Asia"), EUROPE("Europe"), AMERICA("America");
