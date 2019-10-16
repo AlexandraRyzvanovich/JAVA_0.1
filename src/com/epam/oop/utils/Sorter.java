@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Sorter {
-    Comparator<Tariff> comparator1;
-    Comparator<Tariff> comparator2;
+    private final Comparator<Tariff> comparator1;
+    private final Comparator<Tariff> comparator2;
 
     public Sorter() {
         comparator1 = Comparator.comparing(obj -> obj.getSubscriptionFee());

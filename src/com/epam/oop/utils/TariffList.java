@@ -9,18 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TariffList {
+    private static final Logger logger = LogManager.getLogger();
     public List<Tariff> tariffList = new ArrayList<>();
-    public static final Logger logger = LogManager.getLogger();
 
-    public void initTariffList(ArrayList<String> list){
+    public void initTariffList(ArrayList<String> list) {
         for (String line: list) {
             String[] arr = line.split("; ");
             Factory factory = new Factory();
             Tariff tariff = factory.getTariff(arr);
-            if(tariff != null) {
+            if (tariff != null) {
                 tariffList.add(tariff);
             }
-            logger.info("TariffList is generated");
         }
+        logger.info("TariffList is generated");
     }
 }

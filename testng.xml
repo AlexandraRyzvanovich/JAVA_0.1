@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" name="C:/Users/Alexandra/IdeaProjects/JAVA_0.1/test">
+        <classes>
+            <class name="com.epam.test.datareader.ReaderTest"/>
+            <class name="com.epam.test.utils.TariffFinderTest"/>
+            <class name="com.epam.test.utils.TariffListTest"/>
+            <class name="com.epam.test.validator.DataValidatorTest"/>
+        </classes>
+    </test>
+</suite>

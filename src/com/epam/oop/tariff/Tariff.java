@@ -44,7 +44,6 @@ public class Tariff {
                 ", subscriptionFee= " + subscriptionFee +
                 ", minutesPackage= " + callerPackage +
                 ", description= '" + description +
-                ", clients count= '" + description +'\'';
+                ", clients count= '" + description + '\'';
     }
-
 }

@@ -20,17 +20,16 @@ public class ReaderTest {
     @DataProvider
     public Object[] validDataForReader(){
         return new Object[][]{
-                {"./resources/tariffDataTest", 4}
+                {"./resources/tariffData", 4}
 
         };
     }
     @Test(dataProvider = "validDataForReader")
-    public void readFileWithValidDataSuccessfully(String path, int expectedLength){
+    public void readFileWithValidPathSuccessfully(String path, int expectedLength){
         ArrayList<String> actualList = reader.readFile(path);
         Assert.assertNotNull(actualList);
         Assert.assertEquals(actualList.size(), expectedLength );
     }
-
 
     @DataProvider
     public Object[] invalidDataForReader(){
@@ -39,7 +38,7 @@ public class ReaderTest {
     }
 
     @Test(dataProvider = "invalidDataForReader", expectedExceptions = FileReaderException.class)
-    public void readFileWithInvalidDataCatchException(String path) throws FileReaderException {
+    public void readFileWithInvalidPathCatchException(String path) throws FileReaderException {
         reader.readFile(path);
     }
 }

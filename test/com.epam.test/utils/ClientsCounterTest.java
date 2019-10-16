@@ -26,7 +26,7 @@ public class ClientsCounterTest {
 
     @Test
     public void calculateClientsTest(){
-        int clientsCount = clientsCounter.getClientsCount(tariffs);
-        Assert.assertEquals(clientsCount, 2000);
+        double clientsCount = clientsCounter.getClientsCount(tariffs);
+        Assert.assertEquals(clientsCount, 2000.0);
     }
 }

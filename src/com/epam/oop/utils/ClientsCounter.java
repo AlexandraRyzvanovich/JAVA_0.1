@@ -6,8 +6,8 @@ import com.epam.oop.tariff.Tariff;
 import java.util.List;
 
 public class ClientsCounter {
-    public int getClientsCount(List<Tariff> list){
-        if(list.size() == 0){
+    public double getClientsCount(List<Tariff> list) {
+        if (list.size() == 0) {
             throw new UtilsException("List is empty. Impossible to calculate clients");
         }
         int counter = 0;

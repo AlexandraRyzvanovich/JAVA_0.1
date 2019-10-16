@@ -6,7 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Factory {
-    public Tariff getTariff(String[] line){
+    public Tariff getTariff(String[] line) {
         Logger logger = LogManager.getLogger();
         String name;
         double subscriptionFee;
@@ -19,7 +19,7 @@ public class Factory {
             callerPackage = CallerPackage.valueOf(line[2].toUpperCase());
             description = line[3];
             clientsCount = Integer.parseInt(line[4]);
-        }catch (IllegalArgumentException | ArrayIndexOutOfBoundsException ex){
+        } catch (IllegalArgumentException | ArrayIndexOutOfBoundsException ex) {
             throw new FactoryException("Impossible to convert line properly. Line is skipped", ex);
         }
             switch (line[0]) {
@@ -27,7 +27,7 @@ public class Factory {
                     try {
                         int smsCount = Integer.parseInt(line[5]);
                         return new ClassicTariff(name, subscriptionFee, callerPackage, description, clientsCount, smsCount );
-                    }catch (IllegalArgumentException e){
+                    } catch (IllegalArgumentException e) {
                         throw new FactoryException("Impossible to convert line properly. Line is skipped", e);
                     }
 
@@ -37,24 +37,24 @@ public class Factory {
                         int corporateSize = Integer.parseInt(line[6]);
                         return new BusinessTariff(name, subscriptionFee, callerPackage,
                                 description, clientsCount, internetBusiness, corporateSize);
-                    }catch (IllegalArgumentException e){
+                    } catch (IllegalArgumentException e) {
                         throw new FactoryException("Impossible to convert line properly. Line is skipped", e);
                     }
 
                 case "Pro":
-                    try{
+                    try {
                         TVPackage tvPackage = TVPackage.valueOf(line[5].toUpperCase());
                         InternetPackage internetPro = InternetPackage.valueOf(line[6].toUpperCase());
                         return new ProTariff(name, subscriptionFee, callerPackage, description, clientsCount, tvPackage, internetPro);
-                    }catch (IllegalArgumentException e){
+                    } catch (IllegalArgumentException e) {
                         throw new FactoryException("Impossible to convert line properly. Line is skipped", e);
                     }
 
                 case "Tourist":
-                    try{
+                    try {
                         Regions region = Regions.valueOf(line[5].toUpperCase());
                         return new TouristTariff(name, subscriptionFee, callerPackage, description, clientsCount, region);
-                    }catch (IllegalArgumentException e){
+                    } catch (IllegalArgumentException e) {
                         throw new FactoryException("Impossible to convert line properly. Line is skipped", e);
                     }
                 default:
